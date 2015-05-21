@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Object Dance Party</title>
+    <title>SUPER HACK REACTOR</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
     <script src="lib/jquery.js"></script>
-    <script src="src/dancer.js"></script>
-    <script src="src/blinkyDancer.js"></script>
-    <script src="src/movyDancer.js"></script>
-    <script src="src/growyDancer.js"></script>
-    <script src="src/jumpdancer.js"></script>
+    <script src="src/protoDancer.js"></script>
+    <script src="src/titleDancer.js"></script>
+    <script src="src/textDancer.js"></script>
+    <script src="src/marioDancer.js"></script>
   </head>
   <body>
     <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="moveMiddleButton">Move all to the middle</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeMovyDancer">add a moving dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeGrowyDancer">add a growy dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeJumpDancer">add a jump dancer</a>
+      <span class="title">SUPER HACK REACTOR</span>
+      <audio class="audiobar" autoplay loop controls>
+      <source src="src/Resources/SHRtheme.mp3" type="audio/mpeg">
+      </audio>
+      <a href="#" class="toggleTitleButton" data-dancer-maker-function-name="makeTitleDancer">Title</a>
+      <a href="#" class="toggleTextButton" data-dancer-maker-function-name="makeTextDancer">Text</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeMarioDancer">Mario</a>
       </div>
     <script src="src/init.js"></script>
   </body>

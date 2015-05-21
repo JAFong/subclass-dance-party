@@ -1,15 +1,23 @@
 body, html{
   height:100%;
+  font-family: 'Press Start 2P', cursive;
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:#6F85FF;
   font-size: 18px;
+  background-image: url("src/Resources/backgroundclear.jpg");
+  background-position: center bottom;
+  background-repeat: repeat-x;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: white;
 }
 .title, .addDancerButton{
+  padding:5px 12px;
+  float:right;
+}
+.toggleTitleButton, .toggleTextButton{
   padding:5px 12px;
   float:right;
 }
@@ -18,6 +26,7 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
+
 .topbar{
   height:32px;
   background-color: #555;
@@ -26,27 +35,14 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
 }
 
-.blinky{
-  border-color: blue;
+.superHackDancer {
+  position:absolute;
+  min-height: 583;
+  min-width: 236;
 }
-
-.movy {
-  border-radius:20px;
-}
-
-.growy {
-  border-color: green;
-  border-radius: 25px;
-  background-color: green;
-}
-
-.jumper {
-  border-color: purple;
-  border-radius: 20px;
-  background-color: purple;
+.textDancer {
+  position:absolute;
 }
