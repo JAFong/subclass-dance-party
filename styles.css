@@ -2,6 +2,7 @@ body, html{
   height:100%;
   font-family: 'Press Start 2P', cursive;
 }
+
 body{
   margin: 0px;
   background-color:#637AFF;
@@ -22,7 +23,7 @@ body, a:link, a:visited, a:active{
   float:right;
 }
 
-.moveMiddleButton{
+.lineupButton{
   padding:5px 12px;
   float:right;
 }
@@ -43,6 +44,7 @@ body, a:link, a:visited, a:active{
   height: 236px;
   width: 583px;
 }
+
 .textDancer {
   position:absolute;
 }

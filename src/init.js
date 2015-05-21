@@ -24,48 +24,43 @@ $(document).ready(function(){
   $('.scorebar').replaceWith('<div class="scorebar">SCORE: ' + score + '</div>');
   $('.toggleTitleButton').click(function(){$('.superHackDancer').toggle();});
   var textHidden = false;
+
+  // 1P Press Start Hider
   $('.toggleTextButton').click(function(){
     if (textHidden === false) {
     $('.textDancer').css('color', '#637AFF');
     textHidden = true;
     } else {
-      console.log("?")
     $('.textDancer').css('color', 'white');
     textHidden = false;
     }});
 
-  var moveMiddle = function() {
-    // var allBody = $('body')[0].children;
-    // // $('.dancer').moveToMiddle();
-    for (var i = 0; i < $('.dancer').length; i++) {
-      $('.dancer')[i].moveToMiddle();
-    }
-  }
+  // var moveMiddle = function() {
+  //   // var allBody = $('body')[0].children;
+  //   // // $('.dancer').moveToMiddle();
+  //   for (var i = 0; i < $('.dancer').length; i++) {
+  //     $('.dancer')[i].moveToMiddle();
+  //   }
+  // }
   // $(".titleButton").on("click", function(event){
   //   $('superHackDancer').toggle();
   // };
 
-  $(".moveMiddleButton").on("click", function(event){
-    moveMiddle();
+  $(".lineupButton").on("click", function(event) {
+      var $marios = $('.marioDancer');
+      for (var i = 0; i < $marios.length; i++) {
+
+          $marios.each(function(i, obj) {
+              var curPos = i * 40;
+              $(obj).css({
+                  left: curPos
+              });
+          });
+      }
   });
 
  // Logo MouseOver Handler
  $(".superHackDancer").on("mouseover", function(event){
-
-    var $marios = $('.marioDancer');
-    for (var i = 0; i < $marios.length; i++) {
-
-      $marios.each(function(i, obj){
-        var curPos = i*40;
-
-        $(obj).css({left:curPos});
-      })
-
-
-    }
-
-
-
     $(this).animate({
     'top': "-=20px"
   },"fast");
@@ -108,6 +103,10 @@ $(document).ready(function(){
       top = 66;
       left = $("body").width() * Math.random();
       speed = 300;
+    } else if (dancerMakerFunctionName === 'makeBulletDancer') {
+      top = $("body").height() * Math.random();
+      left = -5;
+      speed = 300;
     } else {
       top = $("body").height() * Math.random();
       left = $("body").width() * Math.random();
@@ -128,6 +127,7 @@ $(document).ready(function(){
       score = 0 + "" + score;
     }
     $('.scorebar').replaceWith('<div class="scorebar">SCORE: ' + score + '</div>');
+    console.log(window.dancers);
   });
 
 });

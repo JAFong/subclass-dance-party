@@ -73,7 +73,7 @@ Dancer.prototype.moveToMiddle = function() {
   };
   this.$node.css(top50);
 
-}
+};
 
 var makeDancer = function(top, left, timeBetweenSteps) {
   var newDancer = new Dancer(top, left, timeBetweenSteps);
