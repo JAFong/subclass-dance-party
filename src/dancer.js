@@ -59,6 +59,23 @@ Dancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
+Dancer.prototype.moveToMiddle = function() {
+  this.$node.css({
+    'top': "50%",
+    'bottom': 'auto',
+    'position': 'absolute'
+  });
+};
+
+Dancer.prototype.moveToMiddle = function() {
+
+  var top50 = {
+    top:'50%'
+  };
+  this.$node.css(top50);
+
+}
+
 var makeDancer = function(top, left, timeBetweenSteps) {
   var newDancer = new Dancer(top, left, timeBetweenSteps);
   return newDancer;

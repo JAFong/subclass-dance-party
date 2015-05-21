@@ -16,6 +16,9 @@ GrowyDancer.prototype.step = function() {
     'border-width': "-=30px"
   });
 };
+GrowyDancer.prototype.moveToMiddle = function() {
+  Dancer.prototype.moveToMiddle.call(this);
+};
 
 var makeGrowyDancer = function(top, left, timeBetweenSteps) {
   var newDancer = new GrowyDancer(top, left, timeBetweenSteps);

@@ -1,5 +1,18 @@
 $(document).ready(function(){
+
   window.dancers = [];
+
+  var moveMiddle = function() {
+    // var allBody = $('body')[0].children;
+    // // $('.dancer').moveToMiddle();
+    for (var i = 0; i < $('.dancer').length; i++) {
+      $('.dancer')[i].moveToMiddle();
+    }
+  }
+
+  $(".moveMiddleButton").on("click", function(event){
+    moveMiddle();
+  });
 
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
@@ -22,7 +35,7 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000

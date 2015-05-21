@@ -14,7 +14,9 @@ MovyDancer.prototype.step = function() {
     'marginLeft': "+=30px"
   });
 };
-
+MovyDancer.prototype.moveToMiddle = function() {
+  Dancer.prototype.moveToMiddle.call(this);
+};
 var makeMovyDancer = function(top, left, timeBetweenSteps) {
   var newDancer = new MovyDancer(top, left, timeBetweenSteps);
   return newDancer;

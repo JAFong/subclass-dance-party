@@ -31,14 +31,19 @@ BlinkyDancer.prototype.step = function() {
   this.$node.toggle();
 
 };
-// BlinkyDancer.prototype.setPosition = function(top, left) {
 
-//   var styleSettings = {
-//     top: top,
-//     left: left
-//   };
-//   this.$node.css(styleSettings);
-// };
+BlinkyDancer.prototype.setPosition = function(top, left) {
+
+  var styleSettings = {
+    top: top,
+    left: left
+  };
+  this.$node.css(styleSettings);
+};
+
+BlinkyDancer.prototype.moveToMiddle = function() {
+  Dancer.prototype.moveToMiddle.call(this);
+};
 
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   var newDancer = new BlinkyDancer(top, left, timeBetweenSteps);

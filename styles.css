@@ -13,6 +13,11 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
+
+.moveMiddleButton{
+  padding:5px 12px;
+  float:right;
+}
 .topbar{
   height:32px;
   background-color: #555;
@@ -38,4 +43,10 @@ body, a:link, a:visited, a:active{
   border-color: green;
   border-radius: 25px;
   background-color: green;
+}
+
+.jumper {
+  border-color: purple;
+  border-radius: 20px;
+  background-color: purple;
 }
