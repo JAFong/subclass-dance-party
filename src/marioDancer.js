@@ -1,9 +1,11 @@
+var marioCount = 0;
 var marioFrames = ["src/Resources/mario0.png","src/Resources/mario1.png"];
 
 var MarioDancer = function (top, left, timeBetweenSteps) {
   ProtoDancer.call(this, top, left, timeBetweenSteps);
 
   this.$node.append('<img src="src/Resources/mario0.png" />');
+  this.$node.attr('id', 'marioDancer'+marioCount);
   this.$node.addClass("marioDancer");
 
 };
@@ -37,5 +39,6 @@ MarioDancer.prototype.moveToMiddle = function () {
 
 var makeMarioDancer = function (top, left, timeBetweenSteps) {
   var newDancer = new MarioDancer(top, left, timeBetweenSteps);
+  marioCount++;
   return newDancer;
 };

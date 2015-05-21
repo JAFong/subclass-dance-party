@@ -35,10 +35,10 @@ ProtoDancer.prototype.moveToMiddle = function () {
 
 };
 var checkCol = function(currNode, nextNode) {
-  var currX = currNode.left;
-  var nextX = nextNode.left;
-  var currY = currNode.bottom;
-  var nextY = nextNode.bottom;
+  var currX = currNode.offset().left;
+  var nextX = nextNode.offset().left;
+  var currY = currNode.offset().bottom;
+  var nextY = nextNode.offset().bottom;
   var currHeight = $(currNode).attr('height');
   var currWidth = $(currNode).attr('width');
   var currSize = currHeight * currWidth;
@@ -56,6 +56,7 @@ var checkCol = function(currNode, nextNode) {
       ) {
     return true;
   }
+  return false;
 };
 
 
@@ -63,10 +64,17 @@ ProtoDancer.prototype.collision = function() {
   var that = this;
   var $dancers = $('.dancer');
   for (var i = 0; i < $dancers.length; i++) {
-    if (this.$node[0] !== $($dancers[i])) {
-      console.log("check for intersection");
-      checkCol(this.$node[0],$($dancers[i]));
+    if (this.$node.attr('id')) {
+    if (this.$node.attr('id') !== $($dancers[i]).attr('id')) {
+      console.log(this.$node[0]);
+      console.log($($dancers[i])[0]);
+      // if(checkCol(this.$node[0],$($dancers[i]))) {
+      //   console.log('col detect')
+      // }
+    } else {
+      console.log('same dancer');
     }
+  }
   }
   setTimeout(this.collision.bind(that), 5000);
 }

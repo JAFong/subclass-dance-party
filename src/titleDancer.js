@@ -2,6 +2,7 @@ var TitleDancer = function (top, left, timeBetweenSteps) {
   ProtoDancer.call(this, top, left, timeBetweenSteps);
   this.$node.removeClass("dancer");
   this.$node.addClass("superHackDancer");
+  this.$node.attr('id', 'titleDancer0');
   this.$node.prepend('<img id="shr" src="src/Resources/superHackReactor.png" />');
 };
 
