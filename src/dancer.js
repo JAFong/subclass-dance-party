@@ -53,11 +53,14 @@ Dancer.prototype.step = function() {
 Dancer.prototype.setPosition = function(top, left) {
 
   var styleSettings = {
-    top: this.top,
-    left: this.left
+    top: top,
+    left: left
   };
   this.$node.css(styleSettings);
 };
 
-
+var makeDancer = function(top, left, timeBetweenSteps) {
+  var newDancer = new Dancer(top, left, timeBetweenSteps);
+  return newDancer;
+}
 
