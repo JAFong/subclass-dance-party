@@ -1,7 +1,7 @@
 $(document).ready(function(){
-
+  var score = 0;
   window.dancers = [];
-
+  var dancerCount = 0;
   var top = $("body").height()/4;
   var left = $("body").width()/2 - 236;
   var speed = 10000;
@@ -11,7 +11,17 @@ $(document).ready(function(){
   speed = 300;
   var initialTextDancer = makeTextDancer(top,left,speed);
   $('body').append(hackReactorTitle.$node);
+  window.dancers.push(hackReactorTitle.$node);
+  while (score.toString().length < 12) {
+    score = 0 + "" + score;
+  }
+  $('.scorebar').replaceWith('<div class="scorebar">SCORE: ' + score + '</div>');
   $('body').append(initialTextDancer.$node);
+  window.dancers.push(initialTextDancer.$node);
+  while (score.toString().length < 12) {
+    score = 0 + "" + score;
+  }
+  $('.scorebar').replaceWith('<div class="scorebar">SCORE: ' + score + '</div>');
   $('.toggleTitleButton').click(function(){$('.superHackDancer').toggle();});
   var textHidden = false;
   $('.toggleTextButton').click(function(){
@@ -112,6 +122,12 @@ $(document).ready(function(){
 
     $('body').append(dancer.$node);
     window.dancers.push(dancer.$node);
+    dancerCount++;
+    score = 100 * dancerCount;
+    while (score.toString().length < 12) {
+      score = 0 + "" + score;
+    }
+    $('.scorebar').replaceWith('<div class="scorebar">SCORE: ' + score + '</div>');
   });
 
 });

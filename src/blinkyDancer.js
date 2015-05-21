@@ -22,9 +22,9 @@ BlinkyDancer.prototype.setPosition = function (top, left) {
   this.$node.css(styleSettings);
 };
 
-BlinkyDancer.prototype.moveToMiddle = function () {
-  Dancer.prototype.moveToMiddle.call(this);
-};
+// BlinkyDancer.prototype.moveToMiddle = function () {
+//   Dancer.prototype.moveToMiddle.call(this);
+// };
 
 var makeBlinkyDancer = function (top, left, timeBetweenSteps) {
   var newDancer = new BlinkyDancer(top, left, timeBetweenSteps);
