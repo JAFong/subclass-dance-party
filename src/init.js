@@ -16,7 +16,7 @@ $(document).ready(function(){
   var textHidden = false;
   $('.toggleTextButton').click(function(){
     if (textHidden === false) {
-    $('.textDancer').css('color', '#6F85FF');
+    $('.textDancer').css('color', '#637AFF');
     textHidden = true;
     } else {
       console.log("?")
@@ -37,6 +37,31 @@ $(document).ready(function(){
 
   $(".moveMiddleButton").on("click", function(event){
     moveMiddle();
+  });
+
+ // Logo MouseOver Handler
+ $(".superHackDancer").on("mouseover", function(event){
+
+    var $marios = $('.marioDancer');
+    for (var i = 0; i < $marios.length; i++) {
+
+      $marios.each(function(i, obj){
+        var curPos = i*40;
+
+        $(obj).css({left:curPos});
+      })
+
+
+    }
+
+
+
+    $(this).animate({
+    'top': "-=20px"
+  },"fast");
+    $(this).animate({
+    'top': "+=20px"
+  },"fast");
   });
 
   $(".addDancerButton").on("click", function(event){
@@ -86,8 +111,8 @@ $(document).ready(function(){
     );
 
     $('body').append(dancer.$node);
-  
+    window.dancers.push(dancer.$node);
   });
-  
+
 });
 

@@ -13,15 +13,12 @@ MarioDancer.prototype.constructor = MarioDancer;
 MarioDancer.prototype.step = function () {
   ProtoDancer.prototype.step.call(this);
   this.$node.attr('src', marioFrames[0]);
-  console.log(this.$node.attr('src'));
   this.$node.delay(125);
-  console.log(this.$node);
   this.$node.attr('src', marioFrames[1]);
-    console.log(this.$node.attr('src'));
   this.$node.animate({
-    'marginBottom': "+=30px"
+    'bottom': "+=30px"
   }).delay(125).animate({
-    'marginBottom': "-=30px"
+    'bottom': "-=30px"
   });
 };
 
