@@ -16,14 +16,16 @@ LuigiDancer.prototype.step = function () {
   MarioDancer.prototype.step.call(this);
   this.$node.attr('src', LuigiFrames[0]);
   this.$node.animate({
-    'bottom': "+=50px"
-  }).delay(125).animate({
-    'bottom': "-=50px"
-  });
+    'left': "+=50px"
+  }).animate({
+    'left': "-=100px"
+  }).animate({
+    'left': "+=50px"
+  });;
 };
 
 LuigiDancer.prototype.setPosition = function (bottom, left) {
-
+  ProtoDancer.prototype.setPosition.call(this);
   var styleSettings = {
     bottom: bottom,
     left: left
