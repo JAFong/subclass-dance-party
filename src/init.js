@@ -47,10 +47,9 @@ $(document).ready(function(){
   // };
 
   $(".lineupButton").on("click", function(event) {
-      var $marios = $('.marioDancer');
-      for (var i = 0; i < $marios.length; i++) {
-
-          $marios.each(function(i, obj) {
+      var $dancer = $('.dancer');
+      for (var i = 0; i < $dancer.length; i++) {
+          $dancer.each(function(i, obj) {
               var curPos = i * 40;
               $(obj).css({
                   left: curPos
@@ -58,6 +57,7 @@ $(document).ready(function(){
           });
       }
   });
+ // On press enter
 
  // Logo MouseOver Handler
  $(".superHackDancer").on("mouseover", function(event){
@@ -103,10 +103,14 @@ $(document).ready(function(){
       top = 66;
       left = $("body").width() * Math.random();
       speed = 300;
-    } else if (dancerMakerFunctionName === 'makeBulletDancer') {
-      top = $("body").height() * Math.random();
-      left = -5;
+    } else if (dancerMakerFunctionName === 'makeLuigiDancer') {
+      top = 66;
+      left = $("body").width() * Math.random();
       speed = 300;
+    } else if (dancerMakerFunctionName === 'makeBulletDancer') {
+      top = .8 * $("body").height() * Math.random() +100;
+      left = -5;
+      speed = 5000;
     } else {
       top = $("body").height() * Math.random();
       left = $("body").width() * Math.random();

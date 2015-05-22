@@ -12,8 +12,7 @@ var ProtoDancer = function (top, left, timeBetweenSteps) {
 };
 
 ProtoDancer.prototype.step = function () {
-  var that = this;
-  setTimeout(this.step.bind(that), this.timeBetweenSteps);
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 
 };
 
