@@ -131,7 +131,6 @@ $(document).ready(function(){
       score = 0 + "" + score;
     }
     $('.scorebar').replaceWith('<div class="scorebar">SCORE: ' + score + '</div>');
-    console.log(window.dancers);
   });
 
 });

@@ -2,6 +2,7 @@ var bulletCount = 0;
 
 var BulletDancer = function(top, left, timeBetweenSteps) {
   ProtoDancer.call(this, top, left, timeBetweenSteps);
+  this.$node.removeClass("dancer");
   this.$node.addClass("bulletDancer");
   this.$node.append('<img src="src/Resources/bulletbill0.png" />');
   this.$node.attr('id', 'bulletCount'+bulletCount);
